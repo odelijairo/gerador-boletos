@@ -1,0 +1,27 @@
+{
+  "name": "gerador-boletos",
+  "version": "1.0.0",
+  "description": "Gerador de boletos, utilizando a biblioteca PDFKit",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gerador",
+    "boletos",
+    "boleto",
+    "bancario",
+    "banco",
+    "cecred",
+    "viacredi",
+    "cobranca",
+    "brasil"
+  ],
+  "author": "Jairo Odeli Junior <odelijairo@gmail.com>",
+  "license": "MIT"
+}
