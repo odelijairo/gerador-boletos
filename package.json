@@ -23,5 +23,8 @@
     "brasil"
   ],
   "author": "Jairo Odeli Junior <odelijairo@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "pdfkit": "0.8.3"
+  }
 }

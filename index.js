@@ -4,7 +4,6 @@
 // https://github.com/substack/browserify-handbook#browser-field
 
 module.exports = {
-    nfe: require('./lib/nfeUtils'),
     validacoes: require('./lib/validacoesUtils'),
     dados: require('./lib/dadosUtils'),
     formatacoes: require('./lib/formatacoesUtils'),
