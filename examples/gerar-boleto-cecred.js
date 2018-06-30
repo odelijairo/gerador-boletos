@@ -1,14 +1,14 @@
 const Gerador = require('../index');
 const fs = require('fs');
 
-console.log('run gerar boletos bradesco!');
+console.log('run gerar boleto cecred!!');
 
 const init = () => {
   const boleto = createBoleto();
 
   const dir = '../temp'
   if (!fs.existsSync(dir)) fs.mkdirSync(dir);
-  const writeStream = fs.createWriteStream('../temp/boleto-bradesco.pdf');
+  const writeStream = fs.createWriteStream('../temp/boleto-cecred.pdf');
 
   new Gerador.boleto.Gerador(boleto).gerarPDF({
     creditos: '',

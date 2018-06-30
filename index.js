@@ -9,5 +9,4 @@ module.exports = {
     formatacoes: require('./lib/formatacoesUtils'),
     bancos: require('./lib/bancosUtils'),
     boleto: require('./lib/boletoUtils'),
-    print: require('./lib/print')
 };
