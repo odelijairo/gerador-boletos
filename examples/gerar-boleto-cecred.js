@@ -36,7 +36,7 @@ const createBoleto = () => {
       .comDocumento(14, 07, 2017))
     .comBeneficiario(beneficiario)
     .comPagador(pagador)
-    .comBanco(new bancos.Bradesco())
+    .comBanco(new bancos.Cecred())
     .comValorBoleto(210.15) //Apenas duas casas decimais
     .comNumeroDoDocumento(1001)
     .comEspecieDocumento('DM') //Duplicata de Venda Mercantil
