@@ -6,7 +6,7 @@ console.log('run gerar boletos!!');
 
 const init = () => {
   const boleto = createBoleto();
-  const writeStream = fs.createWriteStream('meuBoleto.pdf');
+  const writeStream = fs.createWriteStream('../temp/boleto-bradesco.pdf');
   // const writeStream = WritableBufferStreamFactory();
 
   new Gerador.boleto.Gerador(boleto).gerarPDF({
@@ -36,9 +36,9 @@ const createBoleto = () => {
 
   return Gerador.boleto.Boleto.novoBoleto()
     .comDatas(Datas.novasDatas()
-      .comVencimento('15', '08', '2018')
-      .comProcessamento('14', '07', '2017')
-      .comDocumento('14', '07', '2017'))
+      .comVencimento(15, 08, 2018)
+      .comProcessamento(14, 07, 2017)
+      .comDocumento(14, 07, 2017))
     .comBeneficiario(beneficiario)
     .comPagador(pagador)
     .comBanco(new bancos.Bradesco())
@@ -74,13 +74,13 @@ const createBeneficiario = () => {
   return Gerador.boleto.Beneficiario.novoBeneficiario()
     .comNome('Empresa Fictícia LTDA')
     .comRegistroNacional('43576788000191')
-    .comCarteira('009')
+    .comCarteira('09')
     .comAgencia('0101')
     .comDigitoAgencia('5')
-    .comCodigoBeneficiario('326446')
+    .comCodigoBeneficiario('0326446')
     .comDigitoCodigoBeneficiario('0')
-    .comNossoNumero('12950000000000061')
-    .comDigitoNossoNumero('8')
+    .comNossoNumero('00000000061') //11 -digitos // "00000005752"
+    .comDigitoNossoNumero('8') // 1 digito // 8
     .comEndereco(enderecoBeneficiario);
 }
 
