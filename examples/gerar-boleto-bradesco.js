@@ -1,13 +1,14 @@
 const Gerador = require('../index');
 const fs = require('fs');
-// const WritableBufferStreamFactory = require('./stream');
 
 console.log('run gerar boletos!!');
 
 const init = () => {
   const boleto = createBoleto();
+
+  const dir = '../temp'
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir);
   const writeStream = fs.createWriteStream('../temp/boleto-bradesco.pdf');
-  // const writeStream = WritableBufferStreamFactory();
 
   new Gerador.boleto.Gerador(boleto).gerarPDF({
     creditos: '',
@@ -16,13 +17,7 @@ const init = () => {
     if (err) return console.error(err);
 
     writeStream.on('finish', () => {
-      console.log('written!');
-      // if (toBase64) {
-      //   const pdfBase64 = writeStream.toBuffer().toString('base64')
-      //   resolve(pdfBase64);
-      // } else {
-      //   resolve(writeStream.toBuffer());
-      // }
+      console.log('written on temp!');
     });
   });
 }
