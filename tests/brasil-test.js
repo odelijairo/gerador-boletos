@@ -1,7 +1,6 @@
-var
-	fs = require("fs"),
-	path = require('path'),
-	utils = require("../brasil");
+const fs = require("fs");
+const path = require('path');
+const utils = require("../index");
 
 var existsSync = (process.version.indexOf("v0.6") !== -1 ? require("path").existsSync : existsSync = fs.existsSync);
 
@@ -24,7 +23,7 @@ module.exports = {
 			var match = file.match(/(.*)Utils.js/);
 
 			if(match){
-				var exists = existsSync(__dirname + "/" + match[1] + "Test.js");
+				var exists = existsSync(__dirname + "/" + match[1] + "-test.js");
 				//console.log(match[1] + " / " + exists);
 				test.ok(exists);
 			}
@@ -38,7 +37,7 @@ module.exports = {
 			var match = file.match(/(.*)Utils.js/);
 
 			if(match){
-				var testFilePath = __dirname + "/" + match[1] + "Test.js";
+				var testFilePath = __dirname + "/" + match[1] + "-test.js";
 				var exists = existsSync(testFilePath);
 				if(exists){
 					var submoduleTest = require(testFilePath);

@@ -3,3 +3,4 @@ dist/
 .idea/
 .env
 temp/*
+tests/boleto/bancos/*.pdf
