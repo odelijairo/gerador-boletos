@@ -69,13 +69,14 @@ const createBeneficiario = () => {
   return Gerador.boleto.Beneficiario.novoBeneficiario()
     .comNome('Empresa Fictícia LTDA')
     .comRegistroNacional('43576788000191')
+    .comNumeroConvenio('123456')
     .comCarteira('09')
     .comAgencia('0101')
     .comDigitoAgencia('5')
-    .comCodigoBeneficiario('0326446')
+    .comCodigoBeneficiario('03264467')
     .comDigitoCodigoBeneficiario('0')
-    .comNossoNumero('00000000061') //11 -digitos // "00000005752"
-    .comDigitoNossoNumero('8') // 1 digito // 8
+    .comNossoNumero('00115290000000004') //17 -digitos
+    // .comDigitoNossoNumero('8') // 1 digito // 8
     .comEndereco(enderecoBeneficiario);
 }
 
