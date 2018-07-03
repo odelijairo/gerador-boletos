@@ -11,6 +11,10 @@
   "scripts": {
     "test": "nodeunit ./tests/*test.js && nodeunit ./tests/boleto/bancos/*test.js && nodeunit ./tests/boleto/*test.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/odelijairo/gerador-boletos"
+  },
   "keywords": [
     "gerador",
     "boletos",
