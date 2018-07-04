@@ -19,7 +19,7 @@ Geração de boletos para bancos:
 ### Install
 
 ```javascript
-npm install --save gerador-boletos
+npm i gerador-boletos --save
 ```
 ### Exemplos de uso
 
