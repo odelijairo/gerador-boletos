@@ -1,6 +1,6 @@
 {
   "name": "gerador-boletos",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Gerador de boletos, utilizando a biblioteca PDFKit",
   "main": "index.js",
   "directories": {
@@ -16,12 +16,14 @@
     "url": "https://github.com/odelijairo/gerador-boletos"
   },
   "keywords": [
+    "gerar",
     "gerador",
     "boletos",
     "boleto",
     "bancario",
     "banco",
     "cecred",
+    "ailos",
     "viacredi",
     "bradesco",
     "itau",

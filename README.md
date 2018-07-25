@@ -12,7 +12,7 @@ Removido código desnecessário para geração de boletos e adicionado banco Cec
 Geração de boletos para bancos:
 - Bradesco
 - Caixa
-- Cecred
+- Ailos (Cecred)
 - Itaú
 - Sicoob
 
