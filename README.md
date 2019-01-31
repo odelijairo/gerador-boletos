@@ -7,7 +7,7 @@
 Biblioteca em Node.js para geração de boletos utilizando PDFKit.  
 
 Cópia da biblioteca https://github.com/gammasoft/brasil aparentemente abandonada.  
-Removido código desnecessário para geração de boletos e adicionado banco Cecred.
+Removido código desnecessário para geração de boletos e adicionado banco Ailos (Cecred).
 
 Geração de boletos para bancos:
 - Bradesco
