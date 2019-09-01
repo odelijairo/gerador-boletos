@@ -1,3 +1,8 @@
+# Note
+
+This is a copy of the library https://github.com/gammasoft/brasil that has been abandoned.
+
+
 # gerador-boletos
 
 <!-- [START badges] -->
