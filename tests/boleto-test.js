@@ -30,7 +30,10 @@ module.exports = {
       test.ok(new bancos.Cecred());
       test.ok(new bancos['085']());
 
-      test.equals(10, Object.keys(bancos).length);
+      test.ok(new bancos.Unicred());
+      test.ok(new bancos['136']());
+
+      test.equals(12, Object.keys(bancos).length);
       test.done();
     },
   },
@@ -85,12 +88,12 @@ module.exports = {
       test.done();
     },
 
-    'Deve lançar exceção se as datas estiverem além de 2024': function(test) {
+    'Deve lançar exceção se as datas estiverem além de 2030': function(test) {
       test.throws(function() {
         Datas.novasDatas()
-          .comDocumento(1, 1, 2024)
-          .comVencimento(1, 1, 2024)
-          .comProcessamento(1, 1, 2024);
+          .comDocumento(1, 1, 2030)
+          .comVencimento(1, 1, 2030)
+          .comProcessamento(1, 1, 2030);
       });
 
       test.done();
