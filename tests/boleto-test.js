@@ -30,10 +30,13 @@ module.exports = {
       test.ok(new bancos.Cecred());
       test.ok(new bancos['085']());
 
+      test.ok(new bancos.Sicredi());
+      test.ok(new bancos['748']());
+
       test.ok(new bancos.Unicred());
       test.ok(new bancos['136']());
 
-      test.equals(12, Object.keys(bancos).length);
+      test.equals(14, Object.keys(bancos).length);
       test.done();
     },
   },
