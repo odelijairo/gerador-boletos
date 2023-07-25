@@ -76,6 +76,7 @@ const createBeneficiario = () => {
     .comDigitoCodigoBeneficiario('0')
     .comNossoNumero('23200123')
     .comDigitoNossoNumero('4')
+    .comPostoBeneficiario('08')
     .comEndereco(enderecoBeneficiario);
 }
 
