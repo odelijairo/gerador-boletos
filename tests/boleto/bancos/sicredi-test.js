@@ -30,6 +30,7 @@ module.exports = {
     beneficiario.comCodigoBeneficiario('01060');
     beneficiario.comNossoNumero('23200123');
     beneficiario.comDigitoNossoNumero('4');
+    beneficiario.comPostoBeneficiario('08');
 
     banco = new Sicredi();
 
@@ -74,7 +75,7 @@ module.exports = {
 
   'Verifica geração da linha digitável - 1': function (test) {
     const codigoDeBarras = banco.geraCodigoDeBarrasPara(boleto);
-    const linhaEsperada = "74891.12321 00123.441552 00010.601078 5 67000000120000";
+    const linhaEsperada = "74891.12321 00123.441552 08010.601014 1 67000000120000";
 
     test.equal(linhaEsperada, geradorDeLinhaDigitavel(codigoDeBarras, banco));
     test.done();
@@ -93,6 +94,7 @@ module.exports = {
     beneficiario.comCodigoBeneficiario('05825');
     beneficiario.comNossoNumero('00015135')
     beneficiario.comDigitoNossoNumero('6');
+    beneficiario.comPostoBeneficiario('07');
 
     const pagador = Pagador.novoPagador();
     pagador.comNome('Rodrigo de Sousa');
@@ -107,7 +109,7 @@ module.exports = {
     boleto.comBanco(banco);
 
     const codigoDeBarras = banco.geraCodigoDeBarrasPara(boleto);
-    const linhaEsperada = '74891.10002 15135.684627 00058.251026 3 60290000268016';
+    const linhaEsperada = '74891.10002 15135.684627 07058.251054 5 60290000268016';
 
     test.equal(linhaEsperada, geradorDeLinhaDigitavel(codigoDeBarras, banco));
     test.done();
@@ -125,6 +127,7 @@ module.exports = {
     beneficiario.comCodigoBeneficiario('08711');
     beneficiario.comNossoNumero('23245678')
     beneficiario.comDigitoNossoNumero('4');
+    beneficiario.comPostoBeneficiario('06');
 
     const pagador = Pagador.novoPagador();
 
@@ -139,7 +142,7 @@ module.exports = {
     boleto.comBanco(banco);
 
     const codigoDeBarras = banco.geraCodigoDeBarrasPara(boleto);
-    const linhaEsperada = '74891.12321 45678.406542 00087.111001 1 60700000057500';
+    const linhaEsperada = '74891.12321 45678.406542 06087.111016 8 60700000057500';
     const linhaGerada = geradorDeLinhaDigitavel(codigoDeBarras, banco);
 
     test.equal(linhaEsperada, linhaGerada);
@@ -158,6 +161,7 @@ module.exports = {
     beneficiario.comCodigoBeneficiario('08711');
     beneficiario.comNossoNumero('23245678')
     beneficiario.comDigitoNossoNumero('2');
+    beneficiario.comPostoBeneficiario('05');
 
     const pagador = Pagador.novoPagador();
 
@@ -172,7 +176,7 @@ module.exports = {
     boleto.comBanco(banco);
 
     const codigoDeBarras = banco.geraCodigoDeBarrasPara(boleto);
-    const linhaEsperada = '74891.12321 45678.206546 00087.111035 3 61030000011538';
+    const linhaEsperada = '74891.12321 45678.206546 05087.111026 6 61030000011538';
     const linhaGerada = geradorDeLinhaDigitavel(codigoDeBarras, banco);
 
     test.equal(linhaEsperada, linhaGerada);
@@ -191,6 +195,7 @@ module.exports = {
     beneficiario.comCodigoBeneficiario('12345');
     beneficiario.comNossoNumero('02891620')
     beneficiario.comDigitoNossoNumero('8');
+    beneficiario.comPostoBeneficiario('04');
 
     const pagador = Pagador.novoPagador();
 
@@ -205,7 +210,7 @@ module.exports = {
     boleto.comBanco(banco);
 
     const codigoDeBarras = banco.geraCodigoDeBarrasPara(boleto);
-    const linhaEsperada = '74891.10283 91620.806546 00123.451023 7 61680000011538';
+    const linhaEsperada = '74891.10283 91620.806546 04123.451009 3 61680000011538';
     const linhaGerada = geradorDeLinhaDigitavel(codigoDeBarras, banco);
 
     test.equal(linhaEsperada, linhaGerada);
@@ -224,6 +229,7 @@ module.exports = {
     beneficiario.comCodigoBeneficiario('87119');
     beneficiario.comNossoNumero('07967777')
     beneficiario.comDigitoNossoNumero('4');
+    beneficiario.comPostoBeneficiario('12');
 
     const pagador = Pagador.novoPagador();
 
@@ -238,7 +244,7 @@ module.exports = {
     boleto.comBanco(banco);
 
     const codigoDeBarras = banco.geraCodigoDeBarrasPara(boleto);
-    const linhaEsperada = '74891.10796 67777.406546 00871.191045 5 61980000023076';
+    const linhaEsperada = '74891.10796 67777.406546 12871.191065 5 61980000023076';
     const linhaGerada = geradorDeLinhaDigitavel(codigoDeBarras, banco);
 
     test.equal(linhaEsperada, linhaGerada);
@@ -263,7 +269,7 @@ module.exports = {
   'Verifica geração do código de barras': function (test) {
     const codigoDeBarras = banco.geraCodigoDeBarrasPara(boleto);
 
-    test.equal('74895670000001200001123200123441550001060107', codigoDeBarras);
+    test.equal('74891670000001200001123200123441550801060101', codigoDeBarras);
     test.done();
   },
 
@@ -291,6 +297,7 @@ module.exports = {
     beneficiario.comCodigoBeneficiario('10106');
     beneficiario.comNossoNumero('23251500');
     beneficiario.comDigitoNossoNumero('8');
+    beneficiario.comPostoBeneficiario('04');
 
     const pagador = Pagador.novoPagador();
     pagador.comNome('Asnésio da Silva');
