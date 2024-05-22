@@ -1,6 +1,6 @@
 {
   "name": "gerador-boletos",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Gerador de boletos, utilizando a biblioteca PDFKit",
   "main": "index.js",
   "directories": {
