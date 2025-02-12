@@ -219,6 +219,16 @@ module.exports = {
       test.done();
     },
 
+    'Calcula corretamente o fator de vencimento em a 21/02/2025': function(test) {
+      const dataDeVencimento = new Date(2025, 1, 21, 0, 0, 0, 0);
+
+      const datas = Datas.novasDatas().comVencimento(dataDeVencimento);
+      const boleto = Boleto.novoBoleto().comDatas(datas);
+
+      test.equals(boleto.getFatorVencimento(), '9999');
+      test.done();
+    },
+
     'Lança exceção ao tentar definir um valor negativo para o boleto': function(test) {
       test.throws(function() {
         Boleto.novoBoleto().comValorBoleto(-5);
