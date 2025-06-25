@@ -40,6 +40,7 @@ const createBoleto = () => {
     .comValorBoleto(210.15) //Apenas duas casas decimais
     .comNumeroDoDocumento(1001)
     .comEspecieDocumento('DM') //Duplicata de Venda Mercantil
+    .comAceite('A')
     .comInstrucoes(instrucoes);
 }
 

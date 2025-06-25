@@ -378,6 +378,21 @@ module.exports = {
       test.equal('R$ 99.999.999,99', boleto.getValorFormatadoBRL());
 
       test.done();
-    }
+    },
+
+    'Aceite deve retornar o valor formatado corretamente': function(test) {
+      let boleto;
+
+      boleto = Boleto.novoBoleto().comAceite(false);
+      test.equal('N', boleto.getAceiteFormatado());
+
+      boleto = Boleto.novoBoleto().comAceite(true);
+      test.equal('S', boleto.getAceiteFormatado());
+
+      boleto = Boleto.novoBoleto().comAceite('A');
+      test.equal('A', boleto.getAceiteFormatado());
+
+      test.done();
+    },
   }
 };
